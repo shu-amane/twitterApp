@@ -19,7 +19,7 @@ class TwitterTestController extends Controller
     public function favorites(Request $request)
     {
         $favo = new GetFavorites;
-        $result = $favo->favorites("naente_dev");
+        $result = $favo->favorites("gleipnil");
         return view("favo", ["favo" => $result]);
     }
 }
