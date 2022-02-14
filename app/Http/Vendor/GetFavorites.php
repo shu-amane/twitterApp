@@ -40,20 +40,20 @@ class GetFavorites
             }
             $array = json_decode(json_encode($favorites), true);
             $last_key = array_key_last($array);
-            // var_dump($last_key);
-            // var_dump($array[$last_key]["id"]);
-            var_dump($array[$last_key]["id"]);
-            var_dump($max_id);
-            if($array[$last_key]["id"] === $max_id){
-                break;
-                var_dump($max_id);
-                var_dump($array[$last_key]["id"]);
+            if(isset($array[$last_key]["id_str"]) === false){
                 var_dump("break通過");
+                break;
             };
-            $max_id = $array[$last_key]["id"] - 1;
+            // var_dump($last_key);
+            // var_dump($array[$last_key]["id_str"]);
+            // var_dump($array[$last_key]["id_str"]);
+            // var_dump($max_id);
+            // var_dump($array);
+            $max_id = $array[$last_key]["id_str"] - 1;
             $favo[] = $array;
         // var_dump($favorites);
         }
+        // var_dump($favo)
         return $favo;
     }
 }
