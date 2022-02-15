@@ -49,11 +49,12 @@ class GetFavorites
             // var_dump($array[$last_key]["id_str"]);
             // var_dump($max_id);
             // var_dump($array);
+            // exit;
             $max_id = $array[$last_key]["id_str"] - 1;
-            $favo[] = $array;
+            $favo = array_merge($favo, $array);
         // var_dump($favorites);
         }
-        // var_dump($favo)
+        // var_dump($favo);
         return $favo;
     }
 }

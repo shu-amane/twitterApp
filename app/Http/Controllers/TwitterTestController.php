@@ -20,6 +20,8 @@ class TwitterTestController extends Controller
     {
         $favo = new GetFavorites;
         $result = $favo->favorites("gleipnil");
+        // dd($result);
         return view("favo", ["favo" => $result]);
+        // return view("favo", compact("result"));
     }
 }
