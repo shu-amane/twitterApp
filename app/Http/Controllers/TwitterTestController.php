@@ -36,7 +36,7 @@ class TwitterTestController extends Controller
     public function regFavo(Request $request)
     {
         $favo = new GetFavorites;
-        $results = $favo->favorites("naente_dev");
+        $results = $favo->favorites("");
         foreach ($results as $result)
         {
             regFavos::create([
