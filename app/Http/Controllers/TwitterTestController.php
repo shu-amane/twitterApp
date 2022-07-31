@@ -14,7 +14,7 @@ class TwitterTestController extends Controller
     public function index(Request $request)
     {
         $t = new CallTwitterApi();
-        $d = $t->serachTweets("APEX");
+        $d = $t->serachTweets("");
         return view('twitter', ['twitter' => $d]);
     }
 
@@ -22,7 +22,7 @@ class TwitterTestController extends Controller
     public function favorites(Request $request)
     {
         $favo = new GetFavorites;
-        $result = $favo->favorites("naente_dev");
+        $result = $favo->favorites("");
         return view("favo", ["favo" => $result]);
     }
 
