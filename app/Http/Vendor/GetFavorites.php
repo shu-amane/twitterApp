@@ -7,6 +7,12 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 use App\Http\Vendor\Connection;
 use Illuminate\Support\Facades\Log;
 
+/**
+ * favoritesを取得する関数
+ *
+ * @param screenName
+ * @return favo
+ */
 class GetFavorites
 {
 
@@ -16,9 +22,6 @@ class GetFavorites
     {
         Log::info(__CLASS__ . "開始");
         $connection = new Connection();
-        if ($connection->getLastHttpCode() != 200) {
-            Log::Error(__FUNCTION__ . "エラー");
-        }
         $this->twitter = $connection->connection();
     }
 

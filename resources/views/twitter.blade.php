@@ -1,3 +1,3 @@
-@foreach ($favo as $twitter)     
-  {{ $favo->text }}<br>                
+@foreach ($favo ?? '' as $twitter)     
+  {{ $favo ?? ''->text }}<br>                
 @endforeach

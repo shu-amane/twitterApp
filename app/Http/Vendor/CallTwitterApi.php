@@ -23,8 +23,7 @@ class callTwitterApi
         $d = $this->t->get("search/tweets", [
             'q' => $searchWord,
             'count' => 3,
-         ]);
-
+        ]);
         return $d->statuses;
     }
 }
